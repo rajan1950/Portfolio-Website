@@ -45,16 +45,27 @@ window.addEventListener('scroll', () => {
 
 // Animate skill bars on scroll
 const skillBars = document.querySelectorAll('.skill-progress');
+let skillsAnimated = false;
 
 const animateSkills = () => {
-    skillBars.forEach(bar => {
-        const barPosition = bar.getBoundingClientRect().top;
+    if (skillsAnimated) return;
+    
+    const skillsSection = document.querySelector('.skills');
+    if (skillsSection) {
+        const sectionPosition = skillsSection.getBoundingClientRect().top;
         const screenPosition = window.innerHeight;
         
-        if (barPosition < screenPosition) {
-            bar.style.width = bar.style.width;
+        if (sectionPosition < screenPosition - 100) {
+            skillBars.forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 100);
+            });
+            skillsAnimated = true;
         }
-    });
+    }
 };
 
 window.addEventListener('scroll', animateSkills);
