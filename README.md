@@ -187,49 +187,16 @@ This Next.js app can be deployed to any platform that supports Node.js:
 - Railway
 - Render
 
-## 📝 Asset Requirements
 
-### Resume PDF
 
-- Location: `public/resume.pdf`
-- Format: PDF
-- Update path in `data/personal-info.ts` if using different filename
 
-### Profile Photo
 
-- Location: `public/photo.jpg`
-- Recommended: Square format (1:1 aspect ratio)
-- Minimum size: 400x400 pixels
-- Formats: JPG, PNG, or WebP
-- File size: Under 500KB for best performance
 
-## 🔧 Troubleshooting
 
-### Scroll animations not working
-- Ensure `framer-motion` is installed: `npm install`
-- Check browser console for errors
-- Verify components are using `ScrollAnimation` wrapper
 
-### Photo not displaying
-- Check file exists in `public` folder
-- Verify filename matches path in `personal-info.ts`
-- Ensure image format is supported (JPG, PNG, WebP)
 
-### Resume download not working
-- Verify PDF file exists in `public` folder
-- Check filename matches path in `personal-info.ts`
-- Ensure file is a valid PDF
 
-### Build errors
-- Clear `.next` folder: `rm -rf .next` (or delete on Windows)
-- Reinstall dependencies: `rm -rf node_modules && npm install`
-- Check TypeScript errors: `npm run lint`
 
-## 📄 License
 
-Personal use - customize as needed for your portfolio.
 
-## 🙏 Credits
-
-Built with modern web technologies and best practices. Feel free to customize and make it your own!
 
